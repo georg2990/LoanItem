@@ -9,20 +9,7 @@ public class loanItemTest {
         scanner.nextLine();
 
         // til at gemme input
-       loanItem[] loanItems = new loanItem[numberOfItems];
-
-        while (numberOfItems <=0) {
-            System.out.print("Hvor mange items vil du registrer");
-            if(scanner.hasNextInt()){
-                numberOfItems = scanner.nextInt();
-                if(numberOfItems <= 0){
-                    System.out.println("venligst indtast et posetivt tal");
-
-                }
-
-                else{
-                    System.out.println("det skal være et posetivt tal");
-                    scanner.next();
+        loanItem[] loanItems = new loanItem[numberOfItems];
 
 
         //spøger om tittel og type
@@ -34,41 +21,31 @@ public class loanItemTest {
             String Title = scanner.next();
 
 
-            if (Type.equals("bog")){
-                loanItems[i] = new loanItem(i,Title, Type);
-            }
-            else if(Type.equals("video")){
-                loanItems[i] = new loanItem(i,Title, Type);
+            if (Type.equals("bog")) {
+                loanItems[i] = new loanItem(i, Title, Type);
+            } else if (Type.equals("video")) {
+                loanItems[i] = new loanItem(i, Title, Type);
 
             }
 
 
-                    }
-                }
+            //udskriv tabel
+            System.out.println("\nListe af lånde items");
+            System.out.println("----------------------");
+            System.out.println("ID, TYPE, TITLE");
+
+            for (int j = 0; j < loanItems.length; j++) {
+                System.out.println((j + 1) + "\t" + loanItems[j].title + "   " + loanItems[j].type + "  ".toString());
             }
-
-
-
 
 
         }
-        //udskriv tabel
-        System.out.println("\nListe af lånde items");
-        System.out.println("----------------------");
-        System.out.println("ID, TYPE, TITLE");
-
-        for (int i =0; i<loanItems.length;i++) {
-            System.out.println((i + 1) +"\t" + loanItems[i].title + "   " + loanItems[i].type + "  ".toString());
-        }
+    }
+}
 
 
 
 
-            }
-
-
-
-        }
 
 
 
