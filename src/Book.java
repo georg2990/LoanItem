@@ -1,6 +1,6 @@
 public class Book extends loanItem {
-    public Book(String name) {
-        super(name);
+    public Book(String title, String type) {
+        super(title, type);
 
     }
 
