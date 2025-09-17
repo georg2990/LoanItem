@@ -9,7 +9,7 @@ public class Main {
         int numberOfItems = scanner.nextInt();
         scanner.nextLine();
 
-        // til at gemme input,,,,,
+        // til at gemme input,,,,,  asd a da dad d a s da d s ad  asd
         String[] types = new String[numberOfItems];
         String[] titles = new String[numberOfItems];
 
