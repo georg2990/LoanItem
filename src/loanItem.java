@@ -4,7 +4,7 @@ public class loanItem {
     String type;
 
     // Constructor
-    public loanItem(String navn, String type) {
+    public loanItem(String title, String type) {
         this.title = title;
         this.type = type;
     }
@@ -15,6 +15,13 @@ public class loanItem {
     public String getType() {
         return type;
     }
+
+    public String  toString() {
+        return (title + " " + type);
+    }
+
+
+
 }
 
 
