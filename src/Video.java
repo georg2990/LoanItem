@@ -1,6 +1,6 @@
 public class Video extends loanItem {
-    public Video(String title, String type) {
-        super(title, type);
+    public Video(int ID, String title, String type) {
+        super(ID, title, type);
 
     }
 

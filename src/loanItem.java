@@ -2,9 +2,10 @@
 public class loanItem {
     String title;
     String type;
+    int ID;
 
     // Constructor
-    public loanItem(String title, String type) {
+    public loanItem(int ID, String type, String title) {
         this.title = title;
         this.type = type;
     }
