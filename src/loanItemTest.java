@@ -11,6 +11,19 @@ public class loanItemTest {
         // til at gemme input
        loanItem[] loanItems = new loanItem[numberOfItems];
 
+        while (numberOfItems <=0) {
+            System.out.print("Hvor mange items vil du registrer");
+            if(scanner.hasNextInt()){
+                numberOfItems = scanner.nextInt();
+                if(numberOfItems <= 0){
+                    System.out.println("venligst indtast et posetivt tal");
+
+                }
+
+                else{
+                    System.out.println("det skal være et posetivt tal");
+                    scanner.next();
+
 
         //spøger om tittel og type
         for (int i = 0; i < numberOfItems; i++) {
@@ -26,7 +39,15 @@ public class loanItemTest {
             }
             else if(Type.equals("video")){
                 loanItems[i] = new loanItem(i,Title, Type);
+
             }
+
+
+                    }
+                }
+            }
+
+
 
 
 
@@ -37,7 +58,7 @@ public class loanItemTest {
         System.out.println("ID, TYPE, TITLE");
 
         for (int i =0; i<loanItems.length;i++) {
-            System.out.println((i + 1) +"\t" + loanItems[i].toString());
+            System.out.println((i + 1) +"\t" + loanItems[i].title + "   " + loanItems[i].type + "  ".toString());
         }
 
 
