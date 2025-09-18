@@ -6,11 +6,12 @@ public class loanItem {
 
     // Constructor
     public loanItem(int ID, String type, String title) {
+        this.ID = ID;
         this.title = title;
         this.type = type;
     }
 
-    public String getName() {
+    public String getTitle() {
         return title;
     }
     public String getType() {
