@@ -31,7 +31,7 @@ public class loanItemTest {
         // array til at gemme input
         loanItem[] loanItems = new loanItem[numberOfItems];
 
-        //spøger om tittel og type
+        //spøger om titel og type
         for (int i = 0; i < numberOfItems; i++) {
             System.out.println("Registrer Item nr. " + (i + 1));
             System.out.print("Type: bog/video?: ");
