@@ -16,37 +16,41 @@ public class loanItemTest {
             if (scanner.hasNextInt()) {
                 numberOfItems = scanner.nextInt();
 
-                // hvis tallet er 0 eller negativt
+                // hvis tallet er 0 eller negativt, viser den en fejlbesked
                 if (numberOfItems <= 0) {
-                    System.out.println("indtast venligst et positivt tal.");
+                    System.out.println("Indtast venligst et positivt tal.");
                 }
             } else {
-                // hvis input ikke er et tal
-                System.out.println("det skal være et positivt tal.");
+                // hvis input ikke er et tal, viser den en fejlbesked
+                System.out.println("Det skal være et positivt tal.");
                 scanner.next();
             }
         }
         scanner.nextLine();
 
-        // array til at gemme input
+        // array til at gemme loanitems
         loanItem[] loanItems = new loanItem[numberOfItems];
 
-        //spøger om titel og type
+        //for loop til registrere loanitems
         for (int i = 0; i < numberOfItems; i++) {
             System.out.println("Registrer Item nr. " + (i + 1));
+
+            // Spørger om type og konverterer det til små bogstaver
             System.out.print("Type: bog/video?: ");
             String Type = scanner.nextLine().toLowerCase();
 
+            // spørger om titel
             System.out.print("Title: ");
             String Title = scanner.nextLine();
 
+            //opretter enten bog eller video
             if (Type.equals("bog")) {
                 loanItems[i] = new Book(i + 1, Title, "Bog");
             } else if (Type.equals("video")) {
                 loanItems[i] = new Video(i + 1, Title, "Video");
             }
         }
-        //udskriv tabel
+        //udskriver tabel over registrerede items
         System.out.println("\nListe af lånte items");
         System.out.println("----------------------");
         System.out.println("ID, TYPE, TITLE");

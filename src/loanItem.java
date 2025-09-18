@@ -11,19 +11,18 @@ public class loanItem {
         this.type = type;
     }
 
+    // getter for titel
     public String getTitle() {
         return title;
     }
+    // getter for type
     public String getType() {
         return type;
     }
-
+    // toString til at udskrive objekt
     public String  toString() {
         return (title + " " + type);
     }
-
-
-
 }
 
 
