@@ -24,8 +24,6 @@ public class loanItemTest {
                 loanItems[i] = new Book(i + 1, Title, "Bog");
             } else if (Type.equals("video")) {
                 loanItems[i] = new Video(i + 1, Title, "Video");
-            } else {
-                System.out.println("Vi har ikke denne type. Item springes over.");
             }
         }
         //udskriv tabel
